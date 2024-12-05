@@ -87,22 +87,22 @@ public class Main {
     }
 
     private static <T> void printInfo(List<? extends Comparable<? super T>> list, T key) {
-        System.out.println("Ищем по ключу id в коллекции " + list);
+        System.out.println("Ищем по ключу в коллекции " + list);
         int index = Collections.binarySearch(list, key);
         printAdditional(index, list, key);
     }
 
     private static <T> void printInfo(List<? extends T> list, T key, Comparator<? super T> c) {
-        System.out.println("Ищем по ключу id в коллекции " + list);
+        System.out.println("Ищем по ключу в коллекции " + list);
         int index = Collections.binarySearch(list, key, c);
         printAdditional(index, list, key);
     }
 
     private static <T> void printAdditional(int index, List<?> list, T key) {
         if (index >= 0) {
-            System.out.println("Элемент c id " + key + " найден по индексу " + index);
+            System.out.println("Элемент c ключом " + key + " найден по индексу " + index);
         } else {
-            System.out.println("Элемент с id " + key +
+            System.out.println("Элемент с ключом " + key +
                     " не найден, но его можно вставить по индексу " + (-index - 1));
             if ((-index - 1) == list.size()) {
                 System.out.println("Можно добавить в конец коллекции");
