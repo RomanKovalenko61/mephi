@@ -1,4 +1,4 @@
-package AlgoAndDataStructure;
+package AlgoAndDataStructure.lesson3;
 
 import java.util.Comparator;
 
